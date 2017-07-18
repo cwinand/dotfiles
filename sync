@@ -1,0 +1,4 @@
+rsync -avzu --progress -h ./.zshrc $HOME/
+rsync -avzu --progress -h ./.vimrc $HOME/
+rsync -avzu --progress -h ./.tmux.conf $HOME/
+rsync -avzu --progress -h ./custom $HOME/.oh-my-zsh/
