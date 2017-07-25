@@ -30,6 +30,8 @@ Plugin 'mattn/emmet-vim'
 " JS
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
 
 " PHP
 Plugin 'StanAngeloff/php.vim'
