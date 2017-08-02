@@ -1,5 +1,6 @@
-set background=dark
-colorscheme Tomorrow-Night-Eighties
+syntax enable
+colorscheme OceanicNext
+
 " Make Vim more useful
 set nocompatible
 
@@ -29,9 +30,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 " JS
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'Quramy/tsuquyomi'
+Plugin 'peitalin/vim-jsx-typescript'
+
 
 " PHP
 Plugin 'StanAngeloff/php.vim'
@@ -63,8 +64,8 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " YouCompleteMe settings
-let g:ycm_server_keep_logfiles=1
-let g:ycm_python_binary_path = '/usr/local/bin/python3'
+" let g:ycm_server_keep_logfiles=1
+" let g:ycm_python_binary_path = '/usr/local/bin/python3'
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Enhance command-line completion
@@ -195,6 +196,11 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
+" Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
 " Automatic commands
 if has("autocmd")
 	" Enable file type detection
@@ -203,4 +209,6 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+  " set filetypes as typescript.jsx
+  autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
 endif
