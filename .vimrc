@@ -14,6 +14,8 @@ Plugin 'VundleVim/Vundle.vim'
 " General
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 Plugin 'junegunn/vim-easy-align'
 
 " Autocompleting
@@ -47,6 +49,10 @@ Plugin 'vim-ruby/vim-ruby'
 
 " Elixir
 Plugin 'elixir-lang/vim-elixir'
+
+" Writing prose-style
+Plugin 'reedes/vim-pencil'
+Plugin 'reedes/vim-wordy'
 
 call vundle#end()
 filetype plugin indent on
