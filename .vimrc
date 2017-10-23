@@ -73,7 +73,9 @@ nmap ga <Plug>(EasyAlign)
 " let g:ycm_server_keep_logfiles=1
 " let g:ycm_python_binary_path = '/usr/local/bin/python3'
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set clipboard=unnamed
+if $TMUX == ''
+  set clipboard+=unnamed
+endif
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
