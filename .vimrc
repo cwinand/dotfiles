@@ -217,6 +217,4 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
-  " set filetypes as typescript.jsx
-  autocmd BufNewFile,BufRead *.tsx set filetype=typescript.jsx
 endif
