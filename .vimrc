@@ -54,6 +54,10 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'reedes/vim-pencil'
 Plugin 'reedes/vim-wordy'
 
+" Keep a local vimrc for project specific config
+Plugin 'LucHermitte/lh-vim-lib'
+Plugin 'LucHermitte/local_vimrc'
+
 call vundle#end()
 filetype plugin indent on
 "End Vundle Config
