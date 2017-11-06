@@ -59,8 +59,8 @@ Plugin 'LucHermitte/lh-vim-lib'
 Plugin 'LucHermitte/local_vimrc'
 
 call vundle#end()
-filetype plugin indent on
 "End Vundle Config
+filetype plugin indent on
 
 " UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<c-j>"
@@ -177,6 +177,9 @@ set foldmethod=manual
 set nofoldenable
 set foldlevel=1
 set foldnestmax=10
+
+"Use matchit.vim
+packadd! matchit
 
 set wildchar=<TAB> " Character for CLI expansion (TAB-completion)
 set wildignore+=.DS_Store
