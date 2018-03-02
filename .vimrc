@@ -224,4 +224,9 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+  " JSP fragments as JSP
+  autocmd BufNewFile,BufRead *.jspf set filetype=jsp
+  autocmd BufNewFile,BufRead *.tag set filetype=jsp
+  " Treat .hbs (handlebars) as html
+  autocmd BufNewFile,BufRead *.hbs set filetype=html
 endif
