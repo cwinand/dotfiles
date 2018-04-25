@@ -156,6 +156,8 @@ set ignorecase
 set incsearch
 " Always show status line
 set laststatus=2
+" Always show open buffers
+set showtabline=2
 " Disable error bells
 set noerrorbells
 " Don’t reset cursor to start of line when moving around.
@@ -212,9 +214,9 @@ noremap <leader>ss :call StripWhitespace()<CR>
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 
 " Automatic commands
 if has("autocmd")
