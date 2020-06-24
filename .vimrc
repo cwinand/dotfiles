@@ -37,11 +37,11 @@ Plugin 'peitalin/vim-jsx-typescript'
 
 
 " PHP
-Plugin 'StanAngeloff/php.vim'
-Plugin 'shawncplus/phpcomplete.vim'
+" Plugin 'StanAngeloff/php.vim'
+" Plugin 'shawncplus/phpcomplete.vim'
 
 " Wordpress
-Plugin 'dsawardekar/wordpress.vim'
+" Plugin 'dsawardekar/wordpress.vim'
 
 " Ruby/Rails
 Plugin 'tpope/vim-rails'
@@ -55,12 +55,13 @@ Plugin 'reedes/vim-pencil'
 Plugin 'reedes/vim-wordy'
 
 " Keep a local vimrc for project specific config
-Plugin 'LucHermitte/lh-vim-lib'
-Plugin 'LucHermitte/local_vimrc'
+" Plugin 'LucHermitte/lh-vim-lib'
+" Plugin 'LucHermitte/local_vimrc'
 
 call vundle#end()
 "End Vundle Config
 filetype plugin indent on
+
 
 " UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<c-j>"
@@ -146,7 +147,7 @@ au BufNewFile,BufRead, *.py
 " EOF
 
 " Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set lcs=tab:▸\ ,trail:·,nbsp:_
 set list
 " Highlight searches
 set hlsearch

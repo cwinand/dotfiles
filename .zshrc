@@ -51,7 +51,7 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vundle rails bundler rsync osx)
+plugins=(git vundle common-aliases rails bundler rsync osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,3 +109,8 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+# Add rbenv to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl)"
